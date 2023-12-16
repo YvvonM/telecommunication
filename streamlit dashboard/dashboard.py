@@ -47,18 +47,20 @@ df = fill_na(df)
 # Display the dataset after filling missing values
 st.subheader("Dataset after Filling Missing Values with Mean")
 st.dataframe(df.head())
-st.title("Bar Plot Analysis")
-# Select a column for bar plot
-selected_column = st.selectbox("Select a column for bar plot", df.columns)
-# Plot the bar plot
-plt.figure(figsize=(10, 6))
-sns.barplot(x=df[selected_column].value_counts().index, y=df[selected_column].value_counts())
-plt.title(f"Bar Plot of {selected_column}")
-plt.xlabel(selected_column)
-plt.ylabel("Count")
-# Display the bar plot in Streamlit
-st.subheader(f"Bar Plot of {selected_column}")
-st.pyplot()
+# st.title("Bar Plot Analysis")
+# # Select a column for bar plot
+# selected_column = st.selectbox("Select a column for bar plot", df.columns)
+# # Plot the bar plot
+# plt.figure(figsize=(10, 6))
+# sns.barplot(x=df[selected_column].value_counts().index, y=df[selected_column].value_counts())
+# plt.title(f"Bar Plot of {selected_column}")
+# plt.xlabel(selected_column)
+# plt.ylabel("Count")
+# # Display the bar plot in Streamlit
+# st.subheader(f"Bar Plot of {selected_column}")
+# st.pyplot()
+
+
 st.subheader('Bivariet analysis')
 df['all_tot'] = df['Total DL (Bytes)'] + df['Total UL (Bytes)']
 df.head()
